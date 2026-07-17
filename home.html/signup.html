@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up — Global Reciprocal Colleges</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/login.css">
+  <link rel="stylesheet" href="assets/signup.css">
+</head>
+<body class="signup-page">
+  <div class="page">
+    <section class="brand-panel" aria-label="Global Reciprocal Colleges">
+      <div class="wave wave-1"></div>
+      <div class="wave wave-2"></div>
+      <div class="wave wave-3"></div>
+      <div class="logo-circle">
+        <img src="assets/logo.png" alt="Global Reciprocal Colleges" class="logo-img">
+      </div>
+    </section>
+
+    <section class="login-panel signup-panel">
+      <div class="login-card signup-card">
+        <div class="card-header">
+          <div>
+            <h1>SIGNUP</h1>
+            <p class="signup-prompt">Already have an Account? <a href="index.html">Login</a></p>
+          </div>
+
+          <div class="role-select role-select--compact" id="roleSelect">
+            <button type="button" class="role-trigger" id="roleTrigger" aria-haspopup="listbox" aria-expanded="false">
+              <span id="roleLabel">Student</span>
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="role-menu" role="listbox" id="roleMenu">
+              <button type="button" class="role-option active" data-role="student">Student</button>
+              <button type="button" class="role-option" data-role="faculty">Faculty</button>
+              <button type="button" class="role-option" data-role="admin">Admin</button>
+            </div>
+            <input type="hidden" name="role" id="roleInput" value="student">
+          </div>
+        </div>
+
+        <form id="signupForm" class="signup-form" novalidate>
+          <div class="field">
+            <label for="fullName">Enter Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" autocomplete="name">
+          </div>
+
+          <div class="field">
+            <label for="studentId">Enter Student ID</label>
+            <input type="text" id="studentId" name="studentId" placeholder="Enter Student ID">
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="course">Course</label>
+              <select id="course" name="course">
+                <option value="" disabled selected>Course</option>
+                <option value="bsit">BS Information Technology</option>
+                <option value="bscs">BS Computer Science</option>
+                <option value="bsba">BS Business Administration</option>
+                <option value="bsn">BS Nursing</option>
+                <option value="beed">B Elementary Education</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="yearLevel">Year level</label>
+              <select id="yearLevel" name="yearLevel">
+                <option value="" disabled selected>Year level</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email" autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="section">Section</label>
+              <input type="text" id="section" name="section" placeholder="Section">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="password">Create Password</label>
+            <input type="password" id="password" name="password" placeholder="Create Password" autocomplete="new-password">
+          </div>
+
+          <div class="field">
+            <label for="confirmPassword">Re-enter Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter Password" autocomplete="new-password">
+          </div>
+
+          <button type="submit" class="btn-signup">Sign Up</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="assets/signup.js"></script>
+  <script>initSignupPage('student');</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card-header h1 {
+  margin-bottom: 6px;
+}
+
+.card-header .signup-prompt {
+  margin-bottom: 0;
+}
+
+.signup-card {
+  max-width: 460px;
+  padding: 36px 36px 32px;
+}
+
+.signup-panel {
+  overflow-y: auto;
+}
+
+.role-select--compact {
+  flex-shrink: 0;
+  width: 130px;
+  margin-bottom: 0;
+}
+
+.role-select--compact .role-trigger {
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+}
+
+.role-select--compact .role-menu {
+  min-width: 130px;
+}
+
+.signup-form .field {
+  margin-bottom: 14px;
+}
+
+.signup-form .field label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.signup-form .field input,
+.signup-form .field select {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1.5px solid #1a1a1a;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+}
+
+.signup-form .field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%231a1a1a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.signup-form .field input::placeholder {
+  color: #888;
+}
+
+.signup-form .field input:focus,
+.signup-form .field select:focus {
+  border-color: var(--red-accent);
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.field-row .field {
+  margin-bottom: 0;
+}
+
+.btn-signup {
+  width: 100%;
+  padding: 13px;
+  margin-top: 8px;
+  background: var(--red-accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btn-signup:hover {
+  background: #a01830;
+}
+
+.btn-signup:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .card-header {
+    flex-direction: column;
+  }
+
+  .role-select--compact {
+    width: 100%;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .field-row .field {
+    margin-bottom: 14px;
+  }
+
+  body.signup-page {
+    overflow: auto;
+  }
+}
